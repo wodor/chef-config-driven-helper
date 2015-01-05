@@ -111,7 +111,11 @@ Add `config-driven-helper::nginx-sites` to enable it.
         'server_name': 'inviqa.com',
         'docroot': '/var/www/inviqa.com',
         'protocols': [ 'http', 'https' ],
-        'keyfile': '/tmp/my-super-insecure-keyfile.pem'
+        'keyfile': '/tmp/my-super-insecure-keyfile.pem',
+        "php_server_variables": {
+          "FOO": "bar",
+          "BAZ": "bam"
+          }
       }
     }
   }
